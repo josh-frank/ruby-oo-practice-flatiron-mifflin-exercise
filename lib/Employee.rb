@@ -1,24 +1,3 @@
-# **`Employee`**
-#   * Employee is initialized with a name and salary. All of these attributes can change.
-#   * `Employee#name`
-#     * returns a `String` that is the employee's name
-#   * `Employee#salary`
-#     * returns a `Fixnum` that is the employee's salary
-#   * `Employee#manager_name`
-#     * returns a `String` that is the name of their manager
-#   * `Employee.all`
-#     * returns an `Array` of all the employees
-#   * `Employee.paid_over`
-#     * takes a `Fixnum` argument and returns an `Array` of all the employees whose salaries are over that amount
-#   * `Employee.find_by_department`
-#     * takes a `String` argument that is the name of a department and returns the first employee whose manager is working in that department
-#   * `Employee#tax_bracket`
-#     * returns an `Array` of all the employees whose salaries are within $1000 (± 1000) of the employee who invoked the method
-#   * `Employee.search_by_role`
-#     * takes a `String` argument that is the name of a role and returns all the employees who work at that role
-#   * `Employee#get_promoted`
-#     * takes an argument of an instance of a Role, updates Employee's role and increases Employee's salary.
-
 class Employee
 
     @@all = []
@@ -70,8 +49,8 @@ class Employee
 
     #   * `Employee.search_by_role`
     #     * takes a `String` argument that is the name of a role and returns all the employees who work at that role
-    def self.search_by_role( role_name )
-        Role.all.find{ | role | role.name == role_name }.employees
+    def self.search_by_role( this_role_name )
+        Role.all.find{ | role | role.name == this_role_name }.employees
     end
 
     #   * `Employee#get_promoted`

@@ -13,6 +13,9 @@ gladys = Manager.new( "Gladys", chew_toys, 70 )
 marty = Manager.new( "Marty", marketing, 65 )
 laura = Manager.new( "Laura", accounts, 67 )
 
+###### WRONG WRONG WRONG #######
+# stella = Employee.new( "Stella", 0, gladys )
+
 chew_toys.add_employee( "Stella", 0, gladys )
 marketing.add_employee( "Josh", 30000, marty )
 marketing.add_employee( "David", 30500, marty )
